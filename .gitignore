@@ -1,2 +1,4 @@
 chirpy-golang-server
 out
+database.json
+.env

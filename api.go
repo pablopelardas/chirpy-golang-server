@@ -2,12 +2,16 @@ package main
 
 import (
 	"fmt"
+	"internal/database"
 	"net/http"
 )
 
 type apiConfig struct {
 	fileserverHitCount int
 	filepathRoot       string
+	DB	*database.DB
+	jwtSecret string
+	polkaApiKey string
 }
 
 func (c *apiConfig) middlewareMetricsInc(next http.Handler) http.Handler {
